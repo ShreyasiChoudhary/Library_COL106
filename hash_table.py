@@ -1,7 +1,7 @@
 from prime_generator import get_next_size
 
 class HashTable:
-    def __init__(self, collision_type, params):
+    def __init__(self, collision_type, param):
         '''
         Possible collision_type:
             "Chain"     : Use hashing with chaining
@@ -10,7 +10,7 @@ class HashTable:
         '''
         self.collision_type = collision_type
         self.count =0
-        self.params = params
+        self.params = param
         if len(self.params)==2:
             self.capacity=self.params[1]
             self.z = self.params[0]
